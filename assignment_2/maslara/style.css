@@ -1,0 +1,35 @@
+.outer-div {
+    padding: 20px;
+    width: 75%;
+    background-color: pink;
+}
+
+.inner-div {
+    margin: auto;
+    width: 75%;
+    text-align: center;
+    background-color: lightblue;
+}
+
+tbody tr:nth-of-type(even) {
+    background: lightgreen;
+}
+
+tbody tr:nth-of-type(odd) {
+    background: lightblue;
+}
+
+tbody th {
+    font-style: italic;
+    font-weight: normal;
+}
+
+label {
+    display: block;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+form {
+    margin-top: 20px;
+}
