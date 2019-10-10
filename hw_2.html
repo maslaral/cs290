@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Alex Maslar - Assignment 2</title>
+        <!-- <link rel="stylesheet" href="style.css"> -->
+    </head>
+
+    <body>
+        <table id="bike_comp" border="1">
+            <caption>Trek Cross/City Bike Comparison Chart</caption>
+            <!-- header row of table -->
+            <thead>
+                <tr>
+                    <th></th> <!-- keep blank -->
+                    <th>Price</th>
+                    <th>Frame</th>
+                    <th>Fork</th>
+                    <th>Rim</th>
+                    <th>Shifter</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- row 2 of table -->
+                <tr>
+                    <th><em>Checkpoint SL 7</em></th> <!-- italic -->
+                    <td>$5,999.99</td>
+                    <td>500 Series OCLV Carbon</td>
+                    <td>Checkpoint Carbon</td>
+                    <td>Aeolus Pro 3V, OCLV Carbon</td>
+                    <td>SRAM Force eTap AXS</td>
+                </tr>
+                <!-- row 3 of table -->
+                <tr>
+                    <th><em>Boone 7</em></th> <!-- italic -->
+                    <td>$4,999.99</td>
+                    <td>600 Series OCLV Carbon</td>
+                    <td>Boone Carbon</td>
+                    <td>Paradigm Elite 25</td>
+                    <td>SRAM Force eTap AXS</td>
+                </tr>
+                <!-- row 4 of table -->
+                <tr>
+                    <th><em>Boone 5</em></th> <!-- italic -->
+                    <td>$3,099.99</td>
+                    <td>600 Series OCLV Carbon</td>
+                    <td>Boone Carbon</td>
+                    <td>Affinity Disc</td>
+                    <td>SRAM Rival</td>
+                </tr>
+                <!-- row 5 of table -->
+                <tr>
+                    <th><em>Crockett 5 Disc</em></th> <!-- italic -->
+                    <td>$2,399.99</td>
+                    <td>300 Series Alpha Aluminum</td>
+                    <td>IsoSpeed Cross Carbon Disc</td>
+                    <td>Affinity Tubeless Ready</td>
+                    <td>SRAM Rival</td>
+                </tr>
+                <!-- row 6 of table -->
+                <tr>
+                    <th><em>Crockett 4 Disc</em></th> <!-- italic -->
+                    <td>$1,679.99</td>
+                    <td>300 Series Alpha Aluminum</td>
+                    <td>Trek Cross Carbon</td>
+                    <td>Affinity Disc</td>
+                    <td>SRAM Apex</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Model/Prices</td>
+                    <td colspan="4">Attributes</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <br />
+
+        <ul>
+            <li><em>Checkpoint</em> - Not a cyclocross bike, but is perfect for city riding and can handle gravel.</li>
+            <li><em>Boone</em> - Pure cyclocross racing, not great for road riding due to it's agressive geometry.</li>
+            <li><em>Crockett</em> - More of a cyclocross race bike, but can be used on the road.</li>
+
+            <div id="pink_section">
+                <div id="blue_section">
+                </div>
+            </div>
+
+            <br />
+
+            <form action="http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php" method="post">
+                <fieldset>
+                    <legend>Post Data</legend>
+                    <label>Text here: 
+                        <input type="text" name="text_input" size="30" maxlength="200">
+                    </label>
+                    <br />
+                    <label>Number here:
+                        <input type="number" name="numerical_input" size="30" maxlength="20">
+                    </label>
+                    <br />
+                    <label>Password here:
+                        <input type="password" name="password_input" size="30" maxlength="50">
+                    </label>
+                    <br />
+                    <p>Select between:
+                    <br />
+                    <label>
+                        <input type="radio" name="candy" value="snickers" />Snickers</label>
+                    <br />
+                    <label>
+                        <input type="radio" name="candy" value="skittles" />Skittles</label>
+                    <br />
+                    <label>
+                        <input type="radio" name="candy" value="Mentos" />Mentos</label>
+                    <br />
+                    </p>
+                    <input type="submit" value="Submit" />
+                </fieldset>
+            </form>
+
+            <form action="http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php" method="get">
+                <fieldset>
+                    <legend>Get Data</legend>
+                    <label>Text here: 
+                        <input type="text" name="text_input" size="30" maxlength="200">
+                    </label>
+                    <br />
+                    <label>Number here:
+                        <input type="number" name="numerical_input" size="30" maxlength="20">
+                    </label>
+                    <br />
+                    <label>Password here:
+                        <input type="password" name="password_input" size="30" maxlength="50">
+                    </label>
+                    <br />
+                    <p>Select between:
+                    <br />
+                    <label>
+                        <input type="radio" name="candy" value="snickers" />Snickers</label>
+                    <br />
+                    <label>
+                        <input type="radio" name="candy" value="skittles" />Skittles</label>
+                    <br />
+                    <label>
+                        <input type="radio" name="candy" value="Mentos" />Mentos</label>
+                    <br />
+                    </p>
+                    <input type="submit" value="Submit" />
+                </fieldset>
+            </form>
+
+    </body>
+</html>
