@@ -1,22 +1,42 @@
-function deepEqual(...x) {
-    let sameLength = true;
-    let result = -Infinitiy;
+function deepEqual (x, y) {
+    // checking whether both are objects and not null
+    if ((typeof x == "object" && x != null) && 
+        (typeof y == "object" && y != null)) {
 
-    // check if x is an object and not null
-    if(typeof(x) == "object" && x != null){
-        for (let x of x) {
-            if (x.length != result){
-                sameLength = false;
-                result = x.length;
+        // getting keys and saving in variables
+        let xProps = Object.keys(x);
+        let yProps = Object.keys(y);
+
+        // comparing length of keys, if not equal to exit
+        if (xProps.length != yProps.length){
+            return false;
+        }
+
+        // checking keys in x are in y and they are equal
+        for (var key in xProps) {
+            if (!(key in yProps)) {
+                return false;
             }
-            else {
-                sameLength = false;
-                break;
+            else if (!deepEqual(xProps[key], yProps[key])) {
+                return false;
             }
         }
-        return sameLength;
+
+        // checking keys in y are in x and they are equal
+        for (var key in yProps) {
+            if (!(key in xProps)) {
+                return false;
+            }
+            else if (!deepEqual(yProps[key], xProps[key])) {
+                return false;
+            }
+        }
+
+        // if made it this far, the values are equal
+        return true;
     }
     else {
+        // the case if not checking two objects
         return x === y;
     }
 }
