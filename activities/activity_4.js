@@ -1,11 +1,11 @@
-var result = [];
+let result = [];
 
 function buildList(list) {
-  for (var i = 0; i < list.length; i++){
+  for (let i = 0; i < list.length; i++){
+      let item = 'item' + list[i];
       return function() {
-          var item = 'item' + list[i];
           result.push(function(){
-              alert(item + ' ' + list[i])
+              console.log(item + ' ' + list[i])
           });
         }
       }
@@ -13,7 +13,7 @@ function buildList(list) {
 }
 
 function testList() {
-  var fnlist = buildList([1, 2, 3]);
+  let fnlist = buildList([1, 2, 3]);
   for (var j = 0; j < fnlist.length; j++) {
     result[j] = fnlist(j);
   }
