@@ -1,21 +1,16 @@
-let result = [];
-
 function buildList(list) {
-  for (let i = 0; i < list.length; i++){
-      let item = 'item' + list[i];
-      return function() {
-          result.push(function(){
-              console.log(item + ' ' + list[i])
-          });
-        }
-      }
+  var result = [];
+  for (var i = 0; i < list.length; i++){
+    var item = 'item' + list[i];
+    result.push(function(){console.log(item + ' ' + list[i])});
+  }
   return result;
 }
 
 function testList() {
-  let fnlist = buildList([1, 2, 3]);
+  var fnlist = buildList([1, 2, 3]);
   for (var j = 0; j < fnlist.length; j++) {
-    result[j] = fnlist(j);
+    fnlist[j]();
   }
 }
 
