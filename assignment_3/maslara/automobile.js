@@ -54,20 +54,13 @@ function makeComparator(auto1, auto2) {
 }
 
 function typeComparator(auto1, auto2) {
-  var types = ["ROADSTER", "PICKUP", "SUV", "WAGON"];
+  // reversed to handle when not equal to any and returns index of -1
+  var types = ["WAGON", "SUV", "PICKUP", "ROADSTER"];
 
   var auto1Position = types.indexOf(auto1.type.toUpperCase());
   var auto2Position = types.indexOf(auto2.type.toUpperCase());
 
-  if (auto1Position === -1) {
-    auto1Position = 5;
-  }
-
-  if (auto2Position === -1) {
-    auto2Position = 5;
-  }
-
-  if (auto1Position > auto2Position) {
+  if (auto1Position < auto2Position) {
     return true;
   } else if (auto1Position === auto2Position) {
     if (auto1.year < auto2.year) {
@@ -78,7 +71,6 @@ function typeComparator(auto1, auto2) {
   }
 }
 
-// function to log through the array and avoid duplication
 function printArray(bool) {
   for (var i = 0; i < automobiles.length; i++) {
     automobiles[i].logMe(bool);
