@@ -54,23 +54,17 @@ function makeComparator(auto1, auto2) {
 }
 
 function typeComparator(auto1, auto2) {
-  var auto1Position = 5;
-  var auto2Position = 5;
+  var types = ["ROADSTER", "PICKUP", "SUV", "WAGON"];
 
-  var types = ["Roadster", "Pickup", "Suv", "Wagon"];
+  var auto1Position = types.indexOf(auto1.type.toUpperCase());
+  var auto2Position = types.indexOf(auto2.type.toUpperCase());
 
-  for (var i = 0; i < types.length; i++) {
-    if (auto1.type.toUpperCase() === types[i].toUpperCase()) {
-      auto1Position = i;
-      break;
-    }
+  if (auto1Position === -1) {
+    auto1Position = 5;
   }
 
-  for (var j = 0; j < types.length; j++) {
-    if (auto2.type.toUpperCase() === types[j].toUpperCase()) {
-      auto2Position = j;
-      break;
-    }
+  if (auto2Position === -1) {
+    auto2Position = 5;
   }
 
   if (auto1Position > auto2Position) {
