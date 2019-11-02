@@ -1,17 +1,17 @@
-var rowPosition;
-var colPosition;
 var numRow = 4;
 var numCol = 4;
+var rowPosition;
+var colPosition;
 var up;
 var down;
 var left;
 var right;
 
+// creating the table
 function init() {
   rowPosition = 1;
   colPosition = 0;
   createTable(numRow, numCol);
-
   buttons();
   selectedCell();
 }
@@ -20,6 +20,8 @@ function createTable(numRow, numCol) {
   var table = document.createElement("table");
   var header = table.createTHead();
   var headerRow = header.insertRow(0);
+
+  table.border = "1";
 
   for (let i = 0; i < numCol; i++) {
     var cell = headerRow.insertCell(i);
@@ -51,7 +53,7 @@ var buttons = function() {
   right.textContent = "Right";
 
   mark = document.createElement("button");
-  mark.textContent = "Mark";
+  mark.textContent = "Mark Cell";
 
   document.body.appendChild(up);
   document.body.appendChild(down);
@@ -63,13 +65,15 @@ var buttons = function() {
 function selectedCell() {
   var table = document.querySelector("table");
   var selected = table.rows[rowPosition].cells[colPosition];
-  selected.style.backgroundColor = "red";
+  selected.style.border = "3px solid black";
 }
+
+init();
 
 function clearCell() {
   var table = document.querySelector("table");
   var selected = table.rows[rowPosition].cells[colPosition];
-  selected.style.backgroundColor = "";
+  selected.style.border = "";
 }
 
 function markCell() {
@@ -77,8 +81,6 @@ function markCell() {
   var selected = table.rows[rowPosition].cells[colPosition];
   selected.style.backgroundColor = "yellow";
 }
-
-init();
 
 up.addEventListener("click", function() {
   if (rowPosition != 1) {
