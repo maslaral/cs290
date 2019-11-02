@@ -7,7 +7,6 @@ var down;
 var left;
 var right;
 
-// creating the table
 function init() {
   rowPosition = 1;
   colPosition = 0;
