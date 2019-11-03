@@ -25,10 +25,10 @@ Automobile.prototype.logMe = function(bool) {
 };
 
 function sortArr(comparator, array) {
-  for (var i = 0; i < array.length - 1; i++) {
-    for (var j = 0; j < array.length - i - 1; j++) {
+  for (let i = 0; i < array.length - 1; i++) {
+    for (let j = 0; j < array.length - i - 1; j++) {
       if (comparator(array[j], array[j + 1])) {
-        var temp = array[j];
+        let temp = array[j];
         array[j] = array[j + 1];
         array[j + 1] = temp;
       }
@@ -62,32 +62,34 @@ function typeComparator(auto1, auto2) {
 
   if (auto1Position < auto2Position) {
     return true;
-  } else if (auto1Position === auto2Position) {
-    if (auto1.year < auto2.year) {
-      return true;
-    }
+  } else if (auto1Position === auto2Position && auto1.year < auto2.year) {
+    return true;
   } else {
     return false;
   }
 }
 
-function printArray(bool) {
-  for (var i = 0; i < automobiles.length; i++) {
+function printAutomobiles(bool) {
+  for (let i = 0; i < automobiles.length; i++) {
     automobiles[i].logMe(bool);
   }
 }
 
+console.log("*****");
+
 console.log("The cars sorted by year are:");
 sortArr(yearComparator, automobiles);
 
-printArray(false);
+printAutomobiles(false);
 
 console.log("The cars sorted by make are:");
 sortArr(makeComparator, automobiles);
 
-printArray(false);
+printAutomobiles(false);
 
 console.log("The cars sorted by type are:");
 sortArr(typeComparator, automobiles);
 
-printArray(true);
+printAutomobiles(true);
+
+console.log("*****");
