@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Activity 5</title>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Weather</legend>
+
+        <input type="radio" name="unit" value="imperial" checked /> Fahrenheit
+        <br />
+        <input type="radio" name="unit" value="metric" /> Celsius
+        <br />
+
+        <input type="text" id="city" placeholder="City" />
+        <input type="text" id="country" placeholder="Country Code" />
+        <input type="submit" id="submitGet" />
+      </fieldset>
+    </form>
+    <ul>
+      <li>Temperature: <span id="temp"></span></li>
+      <li>Temperature (Min): <span id="tempMin"></span></li>
+      <li>Temperature (Max): <span id="tempMax"></span></li>
+      <li>Pressure: <span id="pressure"></span></li>
+      <li>Humidity: <span id="humidity"></span></li>
+    </ul>
+
+    <form>
+      <fieldset>
+        <legend>Post Form</legend>
+        <input type="text" id="postText" placeholder="Enter text to post" />
+        <input type="submit" id="submitPost" />
+      </fieldset>
+    </form>
+    <p>Posted text: <span id="postedText"></span></p>
+
+    <script type="text/javascript" src="activity_5.js"></script>
+  </body>
+</html>

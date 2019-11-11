@@ -7,5 +7,7 @@
 		"path": "/Users/alexmaslar/Library/Mobile Documents/com~apple~CloudDocs/Notes"
 	}
 ],
-  "settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "CS290"
+	}
 }
